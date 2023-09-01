@@ -22,7 +22,7 @@
     <!-- Logger -->
     <logger name="xyz.aqlabs.cookbook.service.UserService" level="INFO"/>
     <logger name="xyz.aqlabs.cookbook.security.AuthenticationService" level="INFO"/>
-
+    <logger name="xyz.aqlabs.cookbook.service.CookbookService" level="INFO"/>
     <!-- Root Logger -->
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>

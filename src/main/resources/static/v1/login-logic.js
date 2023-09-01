@@ -42,6 +42,10 @@ function loginUser() {
     .then(function (data) {
         // Handle successful login
         console.log("Login successful:", data);
+        var token = data.token;
+        var user = JSON.stringify(data.user);
+        sessionStorage.setItem("token", token);
+        sessionStorage.setItem("user",user);
         window.location.href = "/v1/account";
     })
     .catch(function (error) {
