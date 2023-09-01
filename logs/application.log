@@ -1,0 +1,604 @@
+2023-09-01 06:03:51 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 14684 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:03:51 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:03:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:03:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:03:54 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:03:54 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:03:54 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:03:54 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:03:54 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:03:54 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3778 ms
+2023-09-01 06:03:55 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:03:55 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:03:55 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:03:55 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:03:56 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:03:56 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:03:56 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@70c491b8
+2023-09-01 06:03:56 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:03:57 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:03:58 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:03:58 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:03:59 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:04:01 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:04:01 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22f756c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485a5c9, org.springframework.security.web.context.SecurityContextHolderFilter@344f4a82, org.springframework.security.web.header.HeaderWriterFilter@368e7d3a, org.springframework.security.web.authentication.logout.LogoutFilter@6023b54f, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@5fcff272, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6441cff1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1dc987b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d397e87, org.springframework.security.web.session.SessionManagementFilter@2ac00dc9, org.springframework.security.web.access.ExceptionTranslationFilter@2fb40e49, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38aed8ad]
+2023-09-01 06:04:01 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-09-01 06:04:02 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:04:02 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:04:02 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 12.202 seconds (process running for 13.782)
+2023-09-01 06:04:24 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:04:24 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 06:04:24 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 06:30:55 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 8692 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:30:55 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:30:56 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:30:57 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:30:58 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:30:58 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:30:58 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:30:58 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:30:58 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:30:58 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3730 ms
+2023-09-01 06:30:59 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:30:59 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:30:59 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:30:59 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:31:00 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:31:00 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:31:00 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@1a0f349
+2023-09-01 06:31:00 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:31:01 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:31:03 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:31:03 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:31:03 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:31:05 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:31:05 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42eaf47f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@312e8eaf, org.springframework.security.web.context.SecurityContextHolderFilter@56afbace, org.springframework.security.web.header.HeaderWriterFilter@40aaf656, org.springframework.security.web.authentication.logout.LogoutFilter@368e7d3a, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@1be3e952, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53850535, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19565b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c960f64, org.springframework.security.web.session.SessionManagementFilter@2bef33e7, org.springframework.security.web.access.ExceptionTranslationFilter@c680819, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@376c5950]
+2023-09-01 06:31:06 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:31:06 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:31:06 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 12.443 seconds (process running for 13.828)
+2023-09-01 06:31:10 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:31:10 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 06:31:10 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 06:34:11 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 13776 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:34:11 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:34:13 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:34:13 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 172 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:34:14 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:34:14 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:34:14 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:34:14 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:34:15 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:34:15 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3457 ms
+2023-09-01 06:34:15 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:34:15 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:34:15 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:34:15 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:34:16 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:34:16 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:34:16 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@1a0f349
+2023-09-01 06:34:16 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:34:17 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:34:18 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:34:18 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:34:19 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:34:20 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:34:21 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6d2693f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@352a8183, org.springframework.security.web.context.SecurityContextHolderFilter@46059b73, org.springframework.security.web.header.HeaderWriterFilter@21d561c9, org.springframework.security.web.authentication.logout.LogoutFilter@28be7db5, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@2bf2523f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bb46040, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b71a12e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@361d169a, org.springframework.security.web.session.SessionManagementFilter@113a89c5, org.springframework.security.web.access.ExceptionTranslationFilter@380cd266, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f307fcc]
+2023-09-01 06:34:21 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:34:21 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:34:21 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 11.258 seconds (process running for 12.667)
+2023-09-01 06:34:35 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 06:34:35 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 06:34:35 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-01 06:35:45 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:35:45 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 06:35:45 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 06:35:50 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 11084 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:35:50 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:35:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:35:52 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:35:54 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:35:54 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:35:54 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:35:54 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:35:54 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:35:54 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3777 ms
+2023-09-01 06:35:54 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:35:55 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:35:55 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:35:55 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:35:55 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:35:55 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:35:56 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@73aaec54
+2023-09-01 06:35:56 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:35:57 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:35:58 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:35:58 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:35:59 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:36:01 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:36:01 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66c88fce, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ccfce5a, org.springframework.security.web.context.SecurityContextHolderFilter@33f3ebfc, org.springframework.security.web.header.HeaderWriterFilter@4f09d998, org.springframework.security.web.authentication.logout.LogoutFilter@46c093b4, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@495e1ad1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@eb77241, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@197da701, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68a7bc12, org.springframework.security.web.session.SessionManagementFilter@4bc49d70, org.springframework.security.web.access.ExceptionTranslationFilter@6441cff1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2bc52b08]
+2023-09-01 06:36:02 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:36:02 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:36:02 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 12.867 seconds (process running for 14.383)
+2023-09-01 06:36:05 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 06:36:05 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 06:36:05 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-09-01 06:37:31 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:37:31 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 06:37:31 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 06:37:41 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 12024 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:37:41 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:37:43 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:37:43 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 156 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:37:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:37:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:37:45 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:37:45 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:37:45 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:37:45 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4121 ms
+2023-09-01 06:37:45 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:37:45 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:37:45 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:37:46 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:37:46 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:37:46 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:37:47 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@7a1371
+2023-09-01 06:37:47 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:37:47 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:37:49 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:37:49 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:37:49 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:37:51 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:37:51 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47a68e3f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52288c65, org.springframework.security.web.context.SecurityContextHolderFilter@2b71a12e, org.springframework.security.web.header.HeaderWriterFilter@5bd191c2, org.springframework.security.web.authentication.logout.LogoutFilter@33293b34, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@818a514, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60660d21, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2898c70d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33ef393a, org.springframework.security.web.session.SessionManagementFilter@46059b73, org.springframework.security.web.access.ExceptionTranslationFilter@752e50c6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13f358f8]
+2023-09-01 06:37:52 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:37:52 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:37:52 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 12.485 seconds (process running for 13.956)
+2023-09-01 06:37:55 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 06:37:55 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 06:37:55 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-01 06:38:19 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:38:19 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 06:38:19 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 06:38:27 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 12540 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:38:27 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:38:28 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:38:29 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:38:30 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:38:30 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:38:30 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:38:30 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:38:31 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:38:31 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3478 ms
+2023-09-01 06:38:31 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:38:31 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:38:31 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:38:31 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:38:32 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:38:32 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:38:32 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@4fe8f2ae
+2023-09-01 06:38:32 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:38:33 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:38:34 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:38:34 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:38:35 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:38:36 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:38:37 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14f03f2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@235b4aea, org.springframework.security.web.context.SecurityContextHolderFilter@197da701, org.springframework.security.web.header.HeaderWriterFilter@39303a6, org.springframework.security.web.authentication.logout.LogoutFilter@40e41f88, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@238d27ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77737e3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42e32feb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31f4fdc5, org.springframework.security.web.session.SessionManagementFilter@33f3ebfc, org.springframework.security.web.access.ExceptionTranslationFilter@cbd3871, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41d6d6c4]
+2023-09-01 06:38:37 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:38:37 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:38:37 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 11.4 seconds (process running for 12.794)
+2023-09-01 06:39:31 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 06:39:31 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 06:39:31 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-09-01 06:44:26 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:44:26 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 06:44:26 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 06:44:40 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 16212 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:44:40 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:44:43 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:44:43 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 186 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:44:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:44:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:44:45 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:44:45 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:44:45 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:44:45 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5401 ms
+2023-09-01 06:44:46 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:44:46 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:44:46 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:44:47 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:44:47 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:44:47 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:44:48 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@49038f97
+2023-09-01 06:44:48 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:44:49 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:44:50 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:44:51 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:44:51 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:44:53 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:44:54 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@420dde28, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d3a56ea, org.springframework.security.web.context.SecurityContextHolderFilter@347f0950, org.springframework.security.web.header.HeaderWriterFilter@2ac7c683, org.springframework.security.web.authentication.logout.LogoutFilter@4f09d998, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@4b3b2a4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@671561b9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3aebdb4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@141874c8, org.springframework.security.web.session.SessionManagementFilter@2898c70d, org.springframework.security.web.access.ExceptionTranslationFilter@53850535, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@361d169a]
+2023-09-01 06:44:55 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:44:55 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:44:55 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 16.489 seconds (process running for 18.292)
+2023-09-01 06:45:00 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 06:45:00 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 06:45:00 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-01 06:45:30 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:45:30 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 06:45:30 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 06:45:36 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 13376 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:45:36 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:45:38 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:45:38 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 153 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:45:40 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:45:40 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:45:40 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:45:40 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:45:40 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:45:40 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4636 ms
+2023-09-01 06:45:41 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:45:41 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:45:41 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:45:42 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:45:42 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:45:42 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:45:43 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@239b98cb
+2023-09-01 06:45:43 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:45:43 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:45:45 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:45:45 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:45:46 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:45:48 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:45:49 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4349389d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@147203c2, org.springframework.security.web.context.SecurityContextHolderFilter@4bc49d70, org.springframework.security.web.header.HeaderWriterFilter@1ecbb787, org.springframework.security.web.authentication.logout.LogoutFilter@606d2a92, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@6f076c53, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1851f19f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33f3ebfc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11df0bc7, org.springframework.security.web.session.SessionManagementFilter@6bca6c4c, org.springframework.security.web.access.ExceptionTranslationFilter@68a1bb31, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2b0d6bf2]
+2023-09-01 06:45:49 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:45:49 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:45:50 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 15.108 seconds (process running for 16.734)
+2023-09-01 06:45:52 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 06:45:52 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 06:45:52 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-01 06:50:46 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:50:46 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 06:50:46 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 06:50:51 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 14460 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 06:50:51 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 06:50:53 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 06:50:53 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150 ms. Found 1 JPA repository interfaces.
+2023-09-01 06:50:55 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 06:50:55 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:50:55 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 06:50:55 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 06:50:55 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 06:50:55 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3543 ms
+2023-09-01 06:50:55 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 06:50:55 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 06:50:55 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 06:50:56 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:50:56 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 06:50:56 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 06:50:57 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@5e98032e
+2023-09-01 06:50:57 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 06:50:57 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 06:50:59 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 06:50:59 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 06:51:00 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 06:51:01 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 06:51:02 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64ba5a71, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72b689f6, org.springframework.security.web.context.SecurityContextHolderFilter@6b6cf3c1, org.springframework.security.web.header.HeaderWriterFilter@6c8f5262, org.springframework.security.web.authentication.logout.LogoutFilter@2719139f, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@427c2c96, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c450960, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c5fbde4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2286dfcd, org.springframework.security.web.session.SessionManagementFilter@77737e3e, org.springframework.security.web.access.ExceptionTranslationFilter@4b8ba6b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ccfce5a]
+2023-09-01 06:51:02 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 06:51:02 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 06:51:02 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 11.853 seconds (process running for 13.313)
+2023-09-01 06:51:05 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 06:51:05 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 06:51:05 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-09-01 07:02:08 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:02:08 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 07:02:08 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 07:02:13 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 14236 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 07:02:13 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 07:02:15 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 07:02:15 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interfaces.
+2023-09-01 07:02:16 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 07:02:16 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:02:16 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 07:02:16 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 07:02:17 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 07:02:17 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3595 ms
+2023-09-01 07:02:17 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 07:02:17 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 07:02:17 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 07:02:17 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:02:18 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 07:02:18 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 07:02:18 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@3e151e1f
+2023-09-01 07:02:18 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 07:02:19 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:02:20 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 07:02:21 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:02:21 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 07:02:23 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 07:02:23 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1dcf5f38, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64ba5a71, org.springframework.security.web.context.SecurityContextHolderFilter@3652dd19, org.springframework.security.web.header.HeaderWriterFilter@509e0253, org.springframework.security.web.authentication.logout.LogoutFilter@7ef34eb3, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@419ece7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@702e21c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c450960, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72b689f6, org.springframework.security.web.session.SessionManagementFilter@35fd03d9, org.springframework.security.web.access.ExceptionTranslationFilter@674c01ce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66c88fce]
+2023-09-01 07:02:24 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:02:24 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 07:02:24 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 12.056 seconds (process running for 13.493)
+2023-09-01 07:02:31 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 07:02:31 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 07:02:31 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-09-01 07:04:30 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:04:30 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 07:04:30 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 07:04:35 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 1836 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 07:04:35 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 07:04:36 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 07:04:36 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
+2023-09-01 07:04:38 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 07:04:38 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:04:38 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 07:04:38 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 07:04:38 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 07:04:38 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3635 ms
+2023-09-01 07:04:39 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 07:04:39 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 07:04:39 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 07:04:39 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:04:40 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 07:04:40 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 07:04:40 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@49038f97
+2023-09-01 07:04:40 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 07:04:41 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:04:42 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 07:04:42 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:04:43 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 07:04:45 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 07:04:45 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68a7bc12, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14f03f2, org.springframework.security.web.context.SecurityContextHolderFilter@eb77241, org.springframework.security.web.header.HeaderWriterFilter@66694050, org.springframework.security.web.authentication.logout.LogoutFilter@20ee660b, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@4b3b2a4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35fd03d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77737e3e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@235b4aea, org.springframework.security.web.session.SessionManagementFilter@1851f19f, org.springframework.security.web.access.ExceptionTranslationFilter@4f09d998, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e797a39]
+2023-09-01 07:04:46 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:04:46 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 07:04:46 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 12.099 seconds (process running for 13.484)
+2023-09-01 07:08:16 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:08:16 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 07:08:16 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 07:08:21 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 8060 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 07:08:21 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 07:08:23 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 07:08:23 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interfaces.
+2023-09-01 07:08:25 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 07:08:25 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:08:25 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 07:08:25 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 07:08:25 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 07:08:25 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3383 ms
+2023-09-01 07:08:25 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 07:08:25 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 07:08:25 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 07:08:26 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:08:26 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 07:08:26 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 07:08:26 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@4fe8f2ae
+2023-09-01 07:08:26 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 07:08:27 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:08:28 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 07:08:28 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:08:29 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 07:08:30 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 07:08:31 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14f03f2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@235b4aea, org.springframework.security.web.context.SecurityContextHolderFilter@197da701, org.springframework.security.web.header.HeaderWriterFilter@39303a6, org.springframework.security.web.authentication.logout.LogoutFilter@40e41f88, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@238d27ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77737e3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42e32feb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31f4fdc5, org.springframework.security.web.session.SessionManagementFilter@33f3ebfc, org.springframework.security.web.access.ExceptionTranslationFilter@cbd3871, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41d6d6c4]
+2023-09-01 07:08:31 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:08:31 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 07:08:31 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 10.709 seconds (process running for 12.072)
+2023-09-01 07:08:36 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 07:08:36 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 07:08:36 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-09-01 07:10:01 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:10:01 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 07:10:01 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 07:10:06 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 2000 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 07:10:06 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 07:10:08 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 07:10:08 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 125 ms. Found 1 JPA repository interfaces.
+2023-09-01 07:10:10 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 07:10:10 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:10:10 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 07:10:10 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 07:10:10 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 07:10:10 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3625 ms
+2023-09-01 07:10:10 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 07:10:11 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 07:10:11 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 07:10:11 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:10:11 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 07:10:11 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 07:10:12 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@49038f97
+2023-09-01 07:10:12 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 07:10:13 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:10:14 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 07:10:14 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:10:15 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 07:10:16 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 07:10:17 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31f4fdc5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64e680c5, org.springframework.security.web.context.SecurityContextHolderFilter@77737e3e, org.springframework.security.web.header.HeaderWriterFilter@674c01ce, org.springframework.security.web.authentication.logout.LogoutFilter@4d86f330, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@4b3b2a4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3652dd19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b6cf3c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dcf5f38, org.springframework.security.web.session.SessionManagementFilter@eb77241, org.springframework.security.web.access.ExceptionTranslationFilter@39303a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@147203c2]
+2023-09-01 07:10:18 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:10:18 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 07:10:18 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 12.552 seconds (process running for 14.102)
+2023-09-01 07:13:43 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 07:13:43 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 07:13:43 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-09-01 07:41:30 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 12468 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 07:41:30 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 07:41:32 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 07:41:32 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169 ms. Found 1 JPA repository interfaces.
+2023-09-01 07:41:34 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 07:41:34 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:41:34 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 07:41:34 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 07:41:34 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 07:41:34 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4478 ms
+2023-09-01 07:41:35 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 07:41:35 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 07:41:35 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 07:41:36 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:41:36 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 07:41:36 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 07:41:37 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@14a1769d
+2023-09-01 07:41:37 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 07:41:37 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:41:39 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 07:41:39 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:41:40 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 07:41:42 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 07:41:42 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64ba5a71, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72b689f6, org.springframework.security.web.context.SecurityContextHolderFilter@6b6cf3c1, org.springframework.security.web.header.HeaderWriterFilter@6c8f5262, org.springframework.security.web.authentication.logout.LogoutFilter@2719139f, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@1dfd6023, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c450960, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c5fbde4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2286dfcd, org.springframework.security.web.session.SessionManagementFilter@77737e3e, org.springframework.security.web.access.ExceptionTranslationFilter@4b8ba6b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ccfce5a]
+2023-09-01 07:41:43 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:41:43 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 07:41:43 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 14.064 seconds (process running for 15.669)
+2023-09-01 07:41:53 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 07:41:53 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 07:41:53 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-09-01 07:43:59 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:43:59 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 07:43:59 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 07:44:04 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 16348 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 07:44:04 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 07:44:06 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 07:44:06 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interfaces.
+2023-09-01 07:44:08 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 07:44:08 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:44:08 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 07:44:08 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 07:44:08 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 07:44:08 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3328 ms
+2023-09-01 07:44:08 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 07:44:08 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 07:44:08 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 07:44:09 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:44:09 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 07:44:09 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 07:44:10 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@4fe8f2ae
+2023-09-01 07:44:10 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 07:44:10 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:44:11 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 07:44:11 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:44:12 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 07:44:13 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 07:44:14 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@485a5c9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d397e87, org.springframework.security.web.context.SecurityContextHolderFilter@e98004e, org.springframework.security.web.header.HeaderWriterFilter@2898c70d, org.springframework.security.web.authentication.logout.LogoutFilter@4bc49d70, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@1dfd6023, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@381f05a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@375682a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36def543, org.springframework.security.web.session.SessionManagementFilter@73796ae5, org.springframework.security.web.access.ExceptionTranslationFilter@41c56930, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79c4454]
+2023-09-01 07:44:14 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:44:14 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 07:44:14 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 10.807 seconds (process running for 12.181)
+2023-09-01 07:45:10 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 07:45:10 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 07:45:10 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-01 07:48:37 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:48:37 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 07:48:37 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 07:48:42 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 14716 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 07:48:42 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 07:48:44 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 07:48:44 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interfaces.
+2023-09-01 07:48:46 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 07:48:46 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:48:46 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 07:48:46 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 07:48:46 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 07:48:46 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3728 ms
+2023-09-01 07:48:46 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 07:48:47 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 07:48:47 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 07:48:47 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:48:47 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 07:48:47 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 07:48:48 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@3e151e1f
+2023-09-01 07:48:48 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 07:48:48 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:48:49 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 07:48:50 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:48:50 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 07:48:51 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 07:48:52 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@235b4aea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31f4fdc5, org.springframework.security.web.context.SecurityContextHolderFilter@35fd03d9, org.springframework.security.web.header.HeaderWriterFilter@2d7df55, org.springframework.security.web.authentication.logout.LogoutFilter@27b7913, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@419ece7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42e32feb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3652dd19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64e680c5, org.springframework.security.web.session.SessionManagementFilter@5cb3cfef, org.springframework.security.web.access.ExceptionTranslationFilter@66694050, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4349389d]
+2023-09-01 07:48:53 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:48:53 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 07:48:53 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 11.25 seconds (process running for 12.703)
+2023-09-01 07:49:00 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 07:49:00 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 07:49:00 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-09-01 07:49:16 INFO  [http-nio-8080-exec-6] x.a.c.security.AuthenticationService - [o][o][o]---| METHOD EXECUTING: logIn(-376654541) |---[o][o][o]
+2023-09-01 07:49:16 INFO  [http-nio-8080-exec-6] x.a.c.security.AuthenticationService - Attempting to VALIDATE credentials in [dto]: -376654541.
+2023-09-01 07:49:16 INFO  [http-nio-8080-exec-6] x.a.c.security.AuthenticationService - CHECKING if USER with [username]: lcastaa exists.
+2023-09-01 07:49:16 INFO  [http-nio-8080-exec-6] x.a.c.security.AuthenticationService - AUTHENTICATION PASSED
+2023-09-01 07:53:36 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:53:36 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 07:53:36 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 07:53:41 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 7520 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 07:53:41 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 07:53:43 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 07:53:43 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interfaces.
+2023-09-01 07:53:44 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 07:53:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:53:45 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 07:53:45 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 07:53:45 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 07:53:45 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3401 ms
+2023-09-01 07:53:45 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 07:53:45 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 07:53:45 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 07:53:46 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:53:46 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 07:53:46 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 07:53:46 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@14a1769d
+2023-09-01 07:53:46 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 07:53:47 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 07:53:48 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 07:53:48 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 07:53:49 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 07:53:50 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 07:53:51 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7308d133, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35b70f9d, org.springframework.security.web.context.SecurityContextHolderFilter@7021bb55, org.springframework.security.web.header.HeaderWriterFilter@4bc49d70, org.springframework.security.web.authentication.logout.LogoutFilter@106c3e0a, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@41271320, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14d9ae22, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15e881c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21dbd651, org.springframework.security.web.session.SessionManagementFilter@702e21c, org.springframework.security.web.access.ExceptionTranslationFilter@7de2c19c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31f4fdc5]
+2023-09-01 07:53:51 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 07:53:51 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 07:53:51 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 11.079 seconds (process running for 12.521)
+2023-09-01 07:56:00 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 07:56:00 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 07:56:00 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-09-01 07:56:22 INFO  [http-nio-8080-exec-6] x.a.cookbook.service.UserService - [o][o][o]---| METHOD EXECUTING: createUser(-1809485355) |---[o][o][o]
+2023-09-01 07:56:22 INFO  [http-nio-8080-exec-6] x.a.cookbook.service.UserService - USER with hashcode: -783392252 has been CREATED
+2023-09-01 07:56:22 INFO  [http-nio-8080-exec-6] x.a.cookbook.service.UserService - [x][x][x]---| METHOD EXITING: createUser(-1809485355) |---[x][x][x]
+2023-09-01 07:58:01 INFO  [http-nio-8080-exec-10] x.a.c.security.AuthenticationService - [o][o][o]---| METHOD EXECUTING: logIn(213270352) |---[o][o][o]
+2023-09-01 07:58:01 INFO  [http-nio-8080-exec-10] x.a.c.security.AuthenticationService - Attempting to VALIDATE credentials in [dto]: 213270352.
+2023-09-01 07:58:02 INFO  [http-nio-8080-exec-10] x.a.c.security.AuthenticationService - CHECKING if USER with [username]: test exists.
+2023-09-01 07:58:02 INFO  [http-nio-8080-exec-10] x.a.c.security.AuthenticationService - AUTHENTICATION PASSED
+2023-09-01 08:00:03 INFO  [http-nio-8080-exec-4] x.a.cookbook.service.UserService - [o][o][o]---| METHOD EXECUTING: createUser(1173722301) |---[o][o][o]
+2023-09-01 08:00:03 INFO  [http-nio-8080-exec-4] x.a.cookbook.service.UserService - USER with hashcode: 241910152 has been CREATED
+2023-09-01 08:00:03 INFO  [http-nio-8080-exec-4] x.a.cookbook.service.UserService - [x][x][x]---| METHOD EXITING: createUser(1173722301) |---[x][x][x]
+2023-09-01 08:00:48 INFO  [http-nio-8080-exec-3] x.a.cookbook.service.UserService - [o][o][o]---| METHOD EXECUTING: createUser(10216839) |---[o][o][o]
+2023-09-01 08:00:48 INFO  [http-nio-8080-exec-3] x.a.cookbook.service.UserService - USER with hashcode: 57917113 has been CREATED
+2023-09-01 08:00:48 INFO  [http-nio-8080-exec-3] x.a.cookbook.service.UserService - [x][x][x]---| METHOD EXITING: createUser(10216839) |---[x][x][x]
+2023-09-01 08:03:54 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 08:03:54 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 08:03:54 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
+2023-09-01 08:04:03 INFO  [main] x.a.cookbook.CookbookApplication - Starting CookbookApplication using Java 20.0.2 with PID 12236 (D:\Projects\cookbook-app\target\classes started by lcastaa in D:\Projects\cookbook-app)
+2023-09-01 08:04:03 INFO  [main] x.a.cookbook.CookbookApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-01 08:04:04 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 08:04:04 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interfaces.
+2023-09-01 08:04:06 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-09-01 08:04:06 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 08:04:06 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-01 08:04:06 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-01 08:04:06 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-01 08:04:06 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3535 ms
+2023-09-01 08:04:06 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 08:04:07 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-01 08:04:07 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-01 08:04:07 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 08:04:07 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-01 08:04:07 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Starting...
+2023-09-01 08:04:08 INFO  [main] com.zaxxer.hikari.pool.HikariPool - cookbook - Added connection org.postgresql.jdbc.PgConnection@439d545c
+2023-09-01 08:04:08 INFO  [main] com.zaxxer.hikari.HikariDataSource - cookbook - Start completed.
+2023-09-01 08:04:08 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-01 08:04:10 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 08:04:10 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 08:04:11 INFO  [main] o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-01 08:04:12 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 08:04:12 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@361d169a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47a68e3f, org.springframework.security.web.context.SecurityContextHolderFilter@6bb46040, org.springframework.security.web.header.HeaderWriterFilter@2bef33e7, org.springframework.security.web.authentication.logout.LogoutFilter@2ac00dc9, xyz.aqlabs.cookbook.security.JwtAuthenticationFilter@3514df8d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41c56930, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60660d21, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52288c65, org.springframework.security.web.session.SessionManagementFilter@3a0f5141, org.springframework.security.web.access.ExceptionTranslationFilter@21d561c9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f72855d]
+2023-09-01 08:04:13 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 08:04:13 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 08:04:13 INFO  [main] x.a.cookbook.CookbookApplication - Started CookbookApplication in 11.178 seconds (process running for 12.624)
+2023-09-01 08:04:14 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 08:04:14 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-01 08:04:14 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-01 08:04:24 INFO  [http-nio-8080-exec-6] x.a.c.security.AuthenticationService - [o][o][o]---| METHOD EXECUTING: logIn(-376654541) |---[o][o][o]
+2023-09-01 08:04:24 INFO  [http-nio-8080-exec-6] x.a.c.security.AuthenticationService - Attempting to VALIDATE credentials in [dto]: -376654541.
+2023-09-01 08:04:25 INFO  [http-nio-8080-exec-6] x.a.c.security.AuthenticationService - CHECKING if USER with [username]: lcastaa exists.
+2023-09-01 08:04:25 INFO  [http-nio-8080-exec-6] x.a.c.security.AuthenticationService - AUTHENTICATION PASSED
+2023-09-01 08:05:34 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 08:05:34 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown initiated...
+2023-09-01 08:05:34 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - cookbook - Shutdown completed.
