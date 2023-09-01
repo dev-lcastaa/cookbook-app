@@ -12,4 +12,7 @@ public class PageController {
     public String getLoginRegister(){
         return "login-register.html";
     }
+
+    @GetMapping("/account")
+    public String getAccountPage(){return "account.html";}
 }

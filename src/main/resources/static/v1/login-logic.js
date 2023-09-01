@@ -42,6 +42,7 @@ function loginUser() {
     .then(function (data) {
         // Handle successful login
         console.log("Login successful:", data);
+        window.location.href = "/v1/account";
     })
     .catch(function (error) {
         // Handle errors
