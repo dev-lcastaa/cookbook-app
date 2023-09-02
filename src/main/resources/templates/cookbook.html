@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./account.css">
+    <style>
+        /* Add the CSS for the scrollable container */
+        .scroll-container {
+            max-height: 200px; /* Adjust the maximum height as needed */
+            overflow-y: auto;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm nav-bg-color">
@@ -52,7 +59,9 @@
         <div class="main-heading text-center text-uppercase">
             <div class="cookbooks">
                 <h4>Your Recipes</h4>
-                <ul id="recipeList"></ul>
+                <ul id="recipeList">
+                    <!-- Recipe list items will be populated dynamically -->
+                </ul>
             </div>
         </div>
     </div>

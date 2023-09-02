@@ -173,3 +173,71 @@ label {
 .body-container {
   color: #000 !important;
 }
+
+/* Add this CSS to your "account.css" or an external CSS file */
+
+/* Style for the recipe list */
+#recipeList {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style for each recipe item */
+#recipeList li {
+    margin-bottom: 20px;
+    border: 1px solid white;
+    padding: 14px;
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+/* Style for recipe names (links) */
+.recipe-name {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+}
+
+.recipe-name:hover {
+    text-decoration: underline;
+}
+
+/* Style for recipe details */
+.recipe-details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Style for ingredients and steps */
+.recipe-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style for ingredient and step lists */
+.recipe-details ul,
+.recipe-details ol {
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Style for individual ingredients and steps */
+.recipe-details ul li,
+.recipe-details ol li {
+    margin-bottom: 5px;
+}
+
+/* Style for the steps container with scrolling */
+.steps-container {
+    max-height: 200px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+    margin-top: 10px;
+}
