@@ -13,6 +13,7 @@ function addEventListeners() {
 
 // Function to fetch cookbooks from the server
 async function fetchCookbooks(userId, token) {
+    sessionStorage.removeItem("selectedCookBookId")
     try {
         const response = await fetch(`/api/v1/cookbook?userId=${userId}`, {
             method: "GET",
@@ -63,15 +64,9 @@ async function displayCookbooks() {
                 const listItem = document.createElement("li");
                 const cookbookLink = document.createElement("a");
                 cookbookLink.textContent = cookbook.name;
-                cookbookLink.href = "#"; // Set a placeholder href
-                cookbookLink.dataset.cookbookId = cookbook.id; // Store the cookbook ID as a data attribute
+                cookbookLink.href = `/v1/cookbook?cookBookId=${cookbook.id}`;
                 listItem.appendChild(cookbookLink);
                 cookbookList.appendChild(listItem);
-                cookbookLink.addEventListener("click", function (event) {
-                        event.preventDefault(); // Prevent the default link behavior
-                        const cookbookId = this.dataset.cookbookId; // Retrieve the cookbook ID
-                        retrieveRecipesByCookbookId(cookbookId); // Call a function to retrieve recipes
-                });
             });
         }
     }
@@ -123,76 +118,6 @@ async function addCookBook() {
     }
 }
 
-async function retrieveRecipesByCookbookId(cookbookId) {
-    const token = sessionStorage.getItem("token");
-
-    if (token) {
-        try {
-            const response = await fetch(`/api/v1/recipes?cookbookId=${cookbookId}`, {
-                method: "GET",
-                headers: {
-                    "Authorization": `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                }
-            });
-
-            if (response.ok) {
-                const recipes = await response.json();
-                // Display the retrieved recipes on the page
-                displayRecipes(recipes);
-            } else {
-                throw new Error(`Failed to retrieve recipes. HTTP status: ${response.status}`);
-            }
-        } catch (error) {
-            console.error(`Error retrieving recipes: ${error.message}`);
-        }
-    } else {
-        console.log("Token not found in session storage.");
-    }
-}
-
-function displayRecipes(recipes) {
-    const recipesContainer = document.getElementById("recipesContainer"); // Get the container where you want to display recipes
-
-    // Clear the previous content in the container
-    recipesContainer.innerHTML = '';
-
-    if (recipes.length === 0) {
-        // If no recipes were retrieved, display a message
-        const message = document.createElement("p");
-        message.textContent = "No recipes found for this cookbook.";
-        recipesContainer.appendChild(message);
-    } else {
-        // Loop through each recipe and create a display element for it
-        recipes.forEach(recipe => {
-            const recipeItem = document.createElement("div");
-            recipeItem.classList.add("recipe-item"); // You can apply CSS classes or styles as needed
-
-            // Create elements to display recipe details (e.g., name, ingredients, instructions)
-            const recipeName = document.createElement("h3");
-            recipeName.textContent = recipe.name;
-
-            const recipeIngredients = document.createElement("ul");
-            recipe.ingredients.forEach(ingredient => {
-                const ingredientItem = document.createElement("li");
-                ingredientItem.textContent = ingredient;
-                recipeIngredients.appendChild(ingredientItem);
-            });
-
-            const recipeInstructions = document.createElement("p");
-            recipeInstructions.textContent = recipe.instructions;
-
-            // Append the elements to the recipe item
-            recipeItem.appendChild(recipeName);
-            recipeItem.appendChild(recipeIngredients);
-            recipeItem.appendChild(recipeInstructions);
-
-            // Append the recipe item to the recipes container
-            recipesContainer.appendChild(recipeItem);
-        });
-    }
-}
-
 // Function to remove a cookbook
 function removeCookBook() {
     // Implement the logic for removing a cookbook here
@@ -203,3 +128,5 @@ document.addEventListener("DOMContentLoaded", addEventListeners);
 
 // Call the function to display cookbooks when the page loads
 window.addEventListener("load", displayCookbooks);
+
+

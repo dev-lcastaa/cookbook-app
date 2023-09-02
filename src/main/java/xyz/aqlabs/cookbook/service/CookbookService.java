@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import xyz.aqlabs.cookbook.model.Cookbook;
-import xyz.aqlabs.cookbook.model.Type;
-import xyz.aqlabs.cookbook.model.User;
 import xyz.aqlabs.cookbook.model.dto.CookbookDto;
 import xyz.aqlabs.cookbook.repository.CookbookRepository;
 
