@@ -91,18 +91,17 @@ async function getListOfRecipes() {
     }
 }
 
+// Function to populate the list of recipes and set up click event listeners
 function displayListOfRecipes() {
+    const listContainer = document.getElementById('listOfRecipes');
+
     // Retrieve the JSON string from Session Storage
     var storedList = sessionStorage.getItem("recipes");
-    console.log(storedList);
 
     // Check if the JSON string exists
     if (storedList) {
         // Parse the JSON string into a JavaScript object
         var parsedList = JSON.parse(storedList);
-
-        // Access the list container
-        var listContainer = document.getElementById('listOfRecipes');
 
         // Clear any existing content in the list container
         listContainer.innerHTML = '';
@@ -114,12 +113,17 @@ function displayListOfRecipes() {
             // Add a class to the list item
             listItem.classList.add('list-group-item');
 
-            // Create an anchor element for the recipe with a link
+            // Create a clickable element for the cookbook with a link
             var recipeLink = document.createElement('a');
             recipeLink.classList.add('a-cookBookList');
 
             recipeLink.textContent = recipe.name;
-            recipeLink.href = `#`;
+            recipeLink.href = '#'; // Set a dummy href, as we don't need a real URL
+
+            // Add a click event listener to open the viewRecipeModal
+            recipeLink.addEventListener('click', function () {
+                displayRecipeDetails(recipe);
+            });
 
             // Append the anchor element to the list item
             listItem.appendChild(recipeLink);
@@ -129,6 +133,22 @@ function displayListOfRecipes() {
         });
     }
 }
+
+
+// Add event listeners when the DOM content is loaded
+document.addEventListener("DOMContentLoaded", function () {
+    // Your event listeners and function calls here
+    addEventListeners();
+    getListOfRecipes();
+    displayListOfRecipes();
+});
+
+
+
+
+
+
+
 
 function displayListOfDeleteRecipes() {
     // Retrieve the JSON string from Session Storage
@@ -188,6 +208,26 @@ function displayListOfDeleteRecipes() {
         // Append the delete button to the list container
         listContainer.appendChild(deleteButton);
     }
+}
+
+// Function to display the details of a recipe in the viewRecipeModal
+function displayRecipeDetails(recipe) {
+    const viewRecipeModal = document.getElementById("viewRecipeModal");
+    const modalBody = viewRecipeModal.querySelector(".modal-body");
+
+    // Split the ingredients and steps by line breaks
+    const ingredientsList = recipe.ingredients.split('\n').map(item => `<div>${item}</div>`).join('');
+    const stepsList = recipe.steps.split('\n').map(item => `<div>${item}</div>`).join('');
+
+    // Populate the modal with the recipe details
+    modalBody.innerHTML = `
+        <strong>Recipe Name:</strong> ${recipe.name}<br>
+        <strong>Ingredients:</strong><br>${ingredientsList}<br>
+        <strong>Steps:</strong><br>${stepsList}
+    `;
+
+    // Show the viewRecipeModal
+    new bootstrap.Modal(viewRecipeModal).show();
 }
 
 // Adds event listeners for page

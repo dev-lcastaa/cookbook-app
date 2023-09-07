@@ -57,7 +57,7 @@ async function deleteCookBook(cookBookId)  {
 
          if (response.ok) {
              console.log("CookBook removed successfully:");
-             window.location.href = `/v1/cookbook?cookBookId=${cookBookId}`;
+             window.location.href = `/v1/main`;
          } else {
              throw new Error("Removed CookBook failed.");
          }
