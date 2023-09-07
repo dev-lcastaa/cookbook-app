@@ -20,6 +20,12 @@ public class CookBookController {
         return service.createCookBook(dto);
     }
 
+    @DeleteMapping
+    public ResponseEntity<?> deleteCookbook(@RequestParam("id")Integer id){
+        return service.deleteCookbook(id);
+    }
+
+
     @GetMapping
     public ResponseEntity<?> getByUserId(@RequestParam("userId") Integer userId){
         return service.getByUserId(userId);

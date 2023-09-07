@@ -1,9 +1,6 @@
 package xyz.aqlabs.cookbook.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,6 +19,8 @@ public class Recipe {
     private Integer id;
     private Integer cookBookId;
     private String name;
-    private String[] ingredients;
-    private String[] steps;
+    @Column(length = 500)
+    private String ingredients;
+    @Column(length = 500)
+    private String steps;
 }

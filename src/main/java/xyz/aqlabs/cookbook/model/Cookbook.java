@@ -20,7 +20,4 @@ public class Cookbook {
     private Integer id;
     private Integer userId;
     private String name;
-    @Enumerated(EnumType.STRING)
-    private Type type;
-
 }

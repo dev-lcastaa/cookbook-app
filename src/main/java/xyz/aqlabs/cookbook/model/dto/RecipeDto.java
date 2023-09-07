@@ -14,7 +14,7 @@ public class RecipeDto {
 
     private Integer cookBookId;
     private String name;
-    private String[] ingredients;
-    private String[] steps;
+    private String ingredients;
+    private String steps;
 
 }
