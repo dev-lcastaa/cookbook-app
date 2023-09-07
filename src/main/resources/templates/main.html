@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<title>Dashboard</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" th:href="@{./cookbook/main.css}">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+
+<!-- SideBar -->
+<div class="sidenav">
+  <div class="logo">The Cook Book App</div>
+  <a href="/v1/main">My Cook Books</a>
+  <a href="/v1/tool/conversion">Conversion Tool</a>
+  <a href="/v1/tool/recipeFinder">Recipe Finder</a>
+
+</div>
+
+
+<!-- Main Content -->
+<div class="container">
+  <div class="box">
+    <h2>My Cook Books</h2>
+    <tb>
+      <button type="button" class="topButtonAdd" data-bs-toggle="modal" data-bs-target="#createCookBookModal">Add New Cook Book</button>
+      <button id="deleteCookBookModalButton" type="button" class="topButtonDelete" data-bs-toggle="modal" data-bs-target="#deleteCookBookModal">Delete Cook Book</button>
+    </tb>
+    <ul class="list-group" id="listOfCookBooks" style="padding-top: 15px;">
+    </ul>
+
+
+  </div>
+</div>
+
+
+<!-- The Create New Cook Book Modal -->
+<div class="modal" id="createCookBookModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Create Cook Book</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+          <input id="cookbookName" type="text" class="form-control mt-3" placeholder="Name Of Cook Book" required>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="submit" id="addCookBook" class="btn btn-primary" data-bs-dismiss="modal">Add Cook Book</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- The Delete Cook Book Modal -->
+<div class="modal" id="deleteCookBookModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Delete Cook Book</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <ul id="listOfCookBooksToDelete"></ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script th:src="@{./cookbook/main.js}"></script>
+</body>
+</html>
