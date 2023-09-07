@@ -19,8 +19,8 @@ public class Recipe {
     private Integer id;
     private Integer cookBookId;
     private String name;
-    @Column(length = 500)
+    @Column(length = 750)
     private String ingredients;
-    @Column(length = 500)
+    @Column(length = 750)
     private String steps;
 }

@@ -51,7 +51,7 @@ public class RecipeService {
 
 
         // Checks to see if Recipe exists ,if not returns 404 NOT-FOUND
-        LOGGER.info("CHECKING if recipe exists with recipe id: "+recipeId+".");
+        LOGGER.info("CHECKING if cookbook exists with cookbook id: "+recipeId+".");
         if(!repo.existsById(recipeId)) {
             LOGGER.info("Recipe with ID: " + recipeId + " did NOT EXIST.");
             LOGGER.info("------ EXITING METHOD: deleteRecipe(" + recipeId + ") with NOT-FOUND.");

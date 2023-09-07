@@ -43,7 +43,7 @@ async function addCookBook() {
 }
 
 // Function to delete Cook book
-async function deleteCookBook(cookBookId) {
+async function deleteCookBook(cookBookId)  {
     console.log("Deleting cookbook with ID: " + cookBookId);
     const token = sessionStorage.getItem("token");
     try {
@@ -57,7 +57,7 @@ async function deleteCookBook(cookBookId) {
 
          if (response.ok) {
              console.log("CookBook removed successfully:");
-             window.location.href = "/v1/main";
+             window.location.href = `/v1/cookbook?cookBookId=${cookBookId}`;
          } else {
              throw new Error("Removed CookBook failed.");
          }
@@ -207,41 +207,16 @@ function displayListOfCookBooks() {
     }
 }
 
-// Function to add Recipes
-function addRecipe() {
-    console.log("Added Recipe");
-}
-
-// Function to delete Recipes
-function deleteRecipe() {
-    console.log("Delete Recipe");
-}
-
-// Function to get a list of Recipes
-async function getListOfRecipes() {
-}
-
-function displayListOfRecipes(){
-}
-
 // Adds event listeners for page
 function addEventListeners() {
     const addCookBookButton = document.getElementById("addCookBook");
     const deleteCookBookButton = document.getElementById("deleteCookBookModalButton");
-    const addRecipeButton = document.getElementById("addRecipe");
-    const deleteRecipeButton = document.getElementById("deleteRecipe");
 
     if (addCookBookButton) {
         addCookBookButton.addEventListener("click", addCookBook);
     }
     if (deleteCookBookButton) {
         deleteCookBookButton.addEventListener("click", displayDeleteCookBooks);
-    }
-    if (addRecipeButton) {
-        addRecipeButton.addEventListener("click", addRecipe);
-    }
-    if (deleteRecipeButton) {
-        deleteRecipeButton.addEventListener("click", deleteRecipe);
     }
 }
 
@@ -250,6 +225,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Your event listeners and function calls here
     addEventListeners();
     getListOfCookBooks();
-    displayDeleteCookBooks;
+    displayDeleteCookBooks();
 
 });
