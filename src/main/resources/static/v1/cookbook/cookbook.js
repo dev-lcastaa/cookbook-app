@@ -221,7 +221,7 @@ function displayRecipeDetails(recipe) {
 
     // Populate the modal with the recipe details
     modalBody.innerHTML = `
-        <strong>Recipe Name:</strong> ${recipe.name}<br>
+        <strong>Recipe Name:</strong><br>${recipe.name}<br>
         <strong>Ingredients:</strong><br>${ingredientsList}<br>
         <strong>Steps:</strong><br>${stepsList}
     `;
