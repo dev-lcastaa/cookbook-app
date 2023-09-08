@@ -33,4 +33,9 @@ public class PageController {
         model.addAttribute("cookBookId", cookBookId);
         return "cookbook";}
 
+    @GetMapping("/tool/conversion")
+    public String getConversionPage(){
+        return "conversion.html";
+    }
+
 }
