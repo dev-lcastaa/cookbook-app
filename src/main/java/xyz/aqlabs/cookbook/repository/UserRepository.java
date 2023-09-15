@@ -1,8 +1,8 @@
 package xyz.aqlabs.cookbook.repository;
 
 /*
-This Class contains the implementations, anything that will interact with the
-employee database will need to have.
+The User repository interface contains the abstract methods used by the service layer
+to return User entities.
 */
 
 import jakarta.transaction.Transactional;
@@ -23,7 +23,6 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
 
-    // --------|Update, Delete Operations |--------
     @Modifying @Transactional @Query("UPDATE User user SET user.username = :username, user.email = :email WHERE user.userId = :userId")
     void updateUser(@Param(value = "userId") Integer userId,
                         @Param(value = "username") String username,
@@ -36,13 +35,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
             @Param(value = "userId") Integer userId
     );
 
-
-    //---------| Query Methods [Default] |--------
-
-    User findByUserId(Integer id);
-
-
-    Optional<User> findByEmail(String email);
 
     @NonNull
     Optional<User> findByUsername(String username);

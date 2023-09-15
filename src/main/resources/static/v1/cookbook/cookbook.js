@@ -144,12 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
-
-
-
 function displayListOfDeleteRecipes() {
     // Retrieve the JSON string from Session Storage
     var storedList = sessionStorage.getItem("recipes");

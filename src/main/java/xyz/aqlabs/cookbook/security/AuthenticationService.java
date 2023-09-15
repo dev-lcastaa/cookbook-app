@@ -34,39 +34,44 @@ public class AuthenticationService{
 
     @Autowired
     private final UserRepository repo;
+
     private final PasswordEncoder encoder;
+
     private final JwtService jwtService;
+
     private final AuthenticationManager authManager;
     @PersistenceContext
     private EntityManager entityManager;
 
-
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthenticationService.class);
 
 
-    //------| Authenticates employee from the login page |---->
-    public ResponseEntity<?> logIn(LoginDto dto) {
-        LOGGER.info("[o][o][o]---| METHOD EXECUTING: logIn("+ dto.hashCode() +") |---[o][o][o]");
+    // Handles the Login request from the authentication controller
+    public ResponseEntity<?> login(LoginDto dto) {
+        LOGGER.info("[o][o][o]---| Method INVOKED in Authentication Service|---[o][o][o]");
+        LOGGER.info("[o][o][o]---| login("+dto.hashCode()+") |---[o][o][o]");
 
-        LOGGER.info("Attempting to VALIDATE credentials in [dto]: "+ dto.hashCode()+".");
         try {
+            LOGGER.info("[X][X][X]---| ATTEMPTING to Validate credentials in [dto]: "+ dto.hashCode()+" |---[X][X][X]");
             authManager.authenticate(new UsernamePasswordAuthenticationToken(dto.getUsername(), dto.getPassword()));
         }catch (AuthenticationException e){
-            LOGGER.info("AUTHENTICATION FAILED with [dto]: "+ dto.hashCode() +".");
-            return ResponseEntity.status(HttpStatus.FORBIDDEN.value()).body("Server Authentication FAILED");
+            LOGGER.info("[X][X][X]---| Validation FAILED with [dto]: "+ dto.hashCode() +" |---[X][X][X]");
+            return ResponseEntity.status(HttpStatus.FORBIDDEN.value()).body("{\"Msg\" : \"Authentication FAILED check credentials.\"}");
         }
 
-        LOGGER.info("CHECKING if USER with [username]: "+ dto.getUsername() +" exists.");
+
         try {
+            LOGGER.info("[X][X][X]---| CHECKING if user with Username: "+ dto.getUsername() +" exists |---[X][X][X]");
             var user = repo.findByUsername(dto.getUsername())
                     .orElseThrow();
             var token = jwtService.generateToken(user);
-            LOGGER.info("AUTHENTICATION PASSED");
+            LOGGER.info("[X][X][X]---| Authentication PASSED |---[X][X][X]");
+            LOGGER.info("[o][o][o]---| Method EXITING in Authentication Service with SUCCESS |---[o][o][o]");
             return ResponseEntity.ok().body(new ResponseDto(user,token));
-
         }catch (NoSuchElementException e){
-            LOGGER.info("AUTHENTICATION FAILED");
-            return ResponseEntity.status(HttpStatus.NOT_FOUND.value()).body("Invalid Login Credentials");
+            LOGGER.info("[X][X][X]---| Authentication FAILED |---[X][X][X]");
+            LOGGER.info("[o][o][o]---| Method EXITING in Authentication Service with FAILURE |---[o][o][o]");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND.value()).body("{\"Msg\" : \"NO User found with credentials\"}");
         }
     }
 }

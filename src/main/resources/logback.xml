@@ -19,10 +19,21 @@
         </encoder>
     </appender>
 
-    <!-- Logger -->
-    <logger name="xyz.aqlabs.cookbook.service.UserService" level="INFO"/>
+    <!-- Loggers for Service layer -->
     <logger name="xyz.aqlabs.cookbook.security.AuthenticationService" level="INFO"/>
     <logger name="xyz.aqlabs.cookbook.service.CookbookService" level="INFO"/>
+    <logger name="xyz.aqlabs.cookbook.service.RecipeService" level="INFO"/>
+    <logger name="xyz.aqlabs.cookbook.service.FinderService" level="INFO"/>
+    <logger name="xyz.aqlabs.cookbook.service.UserService" level="INFO"/>
+
+    <!-- Loggers for Controller layer -->
+    <logger name="xyz.aqlabs.cookbook.controller.AuthenticationController" level="INFO"/>
+    <logger name="xyz.aqlabs.cookbook.controller.CookBookController" level="INFO"/>
+    <logger name="xyz.aqlabs.cookbook.controller.RecipeController" level="INFO"/>
+    <logger name="xyz.aqlabs.cookbook.controller.FinderController" level="INFO"/>
+    <logger name="xyz.aqlabs.cookbook.controller.PageController" level="INFO"/>
+
+
     <!-- Root Logger -->
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
