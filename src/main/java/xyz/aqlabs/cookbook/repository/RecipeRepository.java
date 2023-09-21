@@ -28,8 +28,4 @@ public interface RecipeRepository extends JpaRepository<Recipe, Integer> {
     @Modifying
     @Query("DELETE FROM Recipe r WHERE r.id = :recipeId")
     void deleteRecipe(@Param("recipeId") Integer recipeId);
-
-
-
-
 }
