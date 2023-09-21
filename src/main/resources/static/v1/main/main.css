@@ -119,3 +119,30 @@ button {
     background-color: #fffbfb;
     border: var(--bs-list-group-border-width) solid #dee2e63d;
 }
+
+@media (max-width: 767px) {
+  body {
+    justify-content: flex-start; /* Align content to the top for mobile */
+  }
+
+  .sidenav {
+    width: 100%; /* Make the side navigation full-width on mobile */
+  }
+
+  /* Adjust other styles as needed for mobile devices */
+  .container {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .box {
+    max-width: 100%; /* Allow boxes to take the full width on mobile */
+  }
+
+  .topButtonAdd:hover {
+    background-color: GREEN; /* Mobile-friendly button hover color */
+  }
+
+  .topButtonDelete:hover {
+    background-color: RED; /* Mobile-friendly button hover color */
+  }
+}

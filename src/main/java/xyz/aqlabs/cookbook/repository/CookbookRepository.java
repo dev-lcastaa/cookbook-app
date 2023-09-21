@@ -1,5 +1,10 @@
 package xyz.aqlabs.cookbook.repository;
 
+/*
+The cookbook repository interface contains the abstract methods used by the service layer
+to return cookbook entities.
+*/
+
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -10,10 +15,13 @@ import xyz.aqlabs.cookbook.model.Cookbook;
 
 import java.util.Optional;
 
+
 @Repository
 public interface CookbookRepository extends JpaRepository<Cookbook, Integer> {
 
+
     Optional<Cookbook[]> findByUserId(Integer userId);
+
 
     @Transactional
     @Modifying

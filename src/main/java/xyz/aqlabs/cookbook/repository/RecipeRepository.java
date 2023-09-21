@@ -1,5 +1,9 @@
 package xyz.aqlabs.cookbook.repository;
 
+/*
+The recipe repository interface contains the abstract methods used by the service layer
+to return recipe entities.
+*/
 
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,8 +28,4 @@ public interface RecipeRepository extends JpaRepository<Recipe, Integer> {
     @Modifying
     @Query("DELETE FROM Recipe r WHERE r.id = :recipeId")
     void deleteRecipe(@Param("recipeId") Integer recipeId);
-
-
-
-
 }

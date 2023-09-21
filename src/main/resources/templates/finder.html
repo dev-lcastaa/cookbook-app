@@ -3,6 +3,7 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" th:href="@{./finder/finder.css}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
     <title>Recipe Finder</title>
 </head>
 <body>
@@ -10,8 +11,8 @@
 <div class="sidenav">
     <div class="logo">The Cook Book App</div>
     <a href="/v1/main">My Cook Books</a>
-    <a href="../authenticate/login.html">Conversion Tool</a>
-    <a href="../authenticate/login.html">Recipe Finder</a>
+    <a href="/v1/tool/conversion">Conversion Tool</a>
+    <a href="/v1/tool/recipeFinder">Recipe Finder</a>
 
 </div>
 
@@ -20,6 +21,50 @@
 <div class="container">
     <div class="box">
         <h2>Recipe Finder</h2>
+        <br>
+        <form>
+            <input class="form-control" rows="4" id="ingredientsForFinder" name="ingredients" placeholder="Enter Available Ingredients" required>
+            <br>
+            <input class="form-control" rows="4" id="ethnicity" name="steps" placeholder="Enter Favorite Ethnic Group" required>
+            <br>
+            <button type="button" id="fetchRecipeModalButton" class="topButtonDelete" data-bs-toggle="modal" data-bs-target="#fetchedRecipeModal">Get Recipe</button>
+        </form>
+    </div>
+</div>
+
+<!-- -->
+<div class="modal" id="fetchedRecipeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Recommended Recipe</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="text-center" id="loadingSpinner" style="display: none;">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div id="recipeContent">
+                    <h4 id="recipeName"></h4>
+                    <p><strong>Ingredients:</strong> <span id="recipeIngredients"></span></p>
+                    <p><strong>Steps:</strong></p>
+                    <p id="recipeSteps"></p>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" id="getAnotherRecipeButton" class="btn btn-primary" data-bs-dismiss="modal">Get Another Recipe</button>
+                <button type="submit" id="addRecipeToCookBookButton" class="btn btn-primary" data-bs-dismiss="modal">Add Recipe to Cookbook</button>
+            </div>
+
+        </div>
     </div>
 </div>
 

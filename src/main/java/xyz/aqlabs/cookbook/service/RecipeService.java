@@ -1,5 +1,10 @@
 package xyz.aqlabs.cookbook.service;
 
+/*
+The Recipe Service handles the business logic forwarded by the recipe controller.
+It's Responsible for using the recipe interface to communicate with the database
+for any query's regarding recipes.
+*/
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -18,17 +23,21 @@ import xyz.aqlabs.cookbook.repository.RecipeRepository;
 @RequiredArgsConstructor
 public class RecipeService {
 
-
+    // Implements Logging to track method activity
     private static final Logger LOGGER = LoggerFactory.getLogger(CookbookService.class);
+
+
     @Autowired
     private final RecipeRepository repo;
 
 
+    // creates recipes.
     public ResponseEntity<?> createRecipe(RecipeDto dto) {
         // Logs when method is invoked provides hash code for following object through log file.
-        LOGGER.info("[o][o][o]---| METHOD EXECUTING: createRecipe("+dto.hashCode()+") |---[o][o][o]");
-        LOGGER.info(dto.getName());
+        LOGGER.info("[o][o][o]---| Method INVOKED in Recipe Service |---[o][o][o]");
+        LOGGER.info("[o][o][o]---| createRecipe("+dto.hashCode()+") |---[o][o][o]");
 
+        LOGGER.info("[X][X][X]---| Building Recipe with name: "+dto.getName()+" |---[X][X][X]");
         var recipe = Recipe.builder()
                 .cookBookId(dto.getCookBookId())
                 .name(dto.getName())
@@ -38,16 +47,18 @@ public class RecipeService {
 
         // Repository saves the entity to the database.
         repo.save(recipe);
-        LOGGER.info("RECIPE with hashcode: "+recipe.hashCode()+" has been CREATED");
-        LOGGER.info("[x][x][x]---| METHOD EXITING: createRecipe("+dto.hashCode()+") |---[x][x][x]");
+        LOGGER.info("[X][X][X]---| RECIPE with hashcode: "+recipe.hashCode()+" has been CREATED |---[X][X][X]");
+        LOGGER.info("[o][o][o]---| EXITING method: createRecipe() in Recipe Service with SUCCESS |---[o][o][o]");
         return ResponseEntity.ok().body("{\"Msg\" : \"Created Recipe Successfully\"}");
     }
 
 
+    // deletes recipes.
     @Transactional
     public ResponseEntity<?> deleteRecipe(Integer recipeId) {
         // Logs when method is invoked provides hash code for following object through log file.
-        LOGGER.info("------ ENTERING METHOD: deleteRecipe(" + recipeId + ").");
+        LOGGER.info("[o][o][o]---| Method INVOKED in Recipe Service |---[o][o][o]");
+        LOGGER.info("[o][o][o]---| deleteRecipe("+ recipeId +") |---[o][o][o]");
 
 
         // Checks to see if Recipe exists ,if not returns 404 NOT-FOUND
@@ -67,6 +78,7 @@ public class RecipeService {
     }
 
 
+    // gets an array of recipes based on what cookbook the recipe belongs to.
     public ResponseEntity<?> getByCookBookId(Integer cookBookId){
         // Logs when method is invoked provides hash code for following object through log file.
         LOGGER.info("[o][o][o]---| METHOD EXECUTING: getByCookBookId("+cookBookId+") |---[o][o][o]");
@@ -77,6 +89,5 @@ public class RecipeService {
         LOGGER.info("[x][x][x]---| METHOD EXITING: getByCookBookId("+cookBookId+") |---[x][x][x]");
         return ResponseEntity.ok().body(recipes);
     }
-
 
 }
