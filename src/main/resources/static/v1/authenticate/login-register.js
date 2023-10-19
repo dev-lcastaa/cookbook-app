@@ -55,7 +55,48 @@ function login() {
 
 //function to register when the register button is clicked
 function register() {
-    console.log("Register button clicked. Implement registration logic here.");
+        var email = document.getElementById("regi-email").value;
+        var username = document.getElementById("regi-username").value;
+        var password = document.getElementById("regi-pass").value;
+
+        console.log(email)
+        console.log(username);
+        console.log(password);
+        var data = {
+            email: email,
+            username: username,
+            password: password,
+            role: 'USER'
+        };
+
+        fetch("/api/v1/auth/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(function (response) {
+            if (response.ok) {
+                // Parse the response body to get the token
+                return response.json();
+            } else {
+                throw new Error("Registration Failed.");
+            }
+        })
+        .then(function (data) {
+            // success on registering
+            console.log("Registration successful:", data);
+            var token = data.token;
+            var user = JSON.stringify(data.user);
+            sessionStorage.setItem("token", token);
+            sessionStorage.setItem("user", user);
+            window.location.href = "/v1/login";
+        })
+        .catch(function (error) {
+            // Handle errors, e.g., display an error message to the user
+            console.error("Register failed:", error);
+        });
 }
 
 // Add event listeners when the DOM content is loaded

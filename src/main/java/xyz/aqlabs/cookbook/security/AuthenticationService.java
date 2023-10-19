@@ -1,7 +1,7 @@
 package xyz.aqlabs.cookbook.security;
 
 /*
-This Class is responsible for authenticating the employee
+This Class is responsible for authenticating the user
 using the information from front-end login pages.
 */
 
