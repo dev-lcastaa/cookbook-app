@@ -61,6 +61,43 @@ async function fetchRecipe() {
     finally { hideLoadingSpinner(); }
 }
 
+async function handleFetchedRecipe(){
+
+    cookbooks = sessionStorage.getItem('cookbooks')
+
+
+    const data = {
+            name: name,
+            cookBookId: cookBookId,
+            ingredients: ingredients,
+            steps: steps
+        };
+
+        try {
+            const response = await fetch("/api/v1/recipe", {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                console.log("Recipe added successfully");
+
+                // Clear input fields
+                document.getElementById("recipeName").value = "";
+                document.getElementById("ingredients").value = "";
+                document.getElementById("steps").value = "";
+            } else {
+                throw new Error("Add Recipe failed.");
+            }
+        } catch (error) {
+            console.error("Add Recipe failed:", error.message);
+        }
+}
+
 
 // Function to validate response from OpenAi is of specified format
 function validateResponse(response) {
@@ -113,6 +150,8 @@ function hideLoadingSpinner() {
 }
 
 
+
+
 // Attach a click event listener to the "Get Recipe" button
 document.getElementById('fetchRecipeModalButton').addEventListener('click', fetchRecipe);
 
@@ -125,4 +164,10 @@ document.getElementById('getAnotherRecipeButton').addEventListener('click', () =
 
 document.getElementById('addRecipeToCookBookButton').addEventListener('click', () => {
     // Handle adding the recipe to the cookbook
+});
+
+
+document.getElementById('addRecipeToCookBookButton').addEventListener('click', function () {
+    // Call the method to save the recipe to the cookbook
+    handleFetchedRecipe(); // Pass the recipe data to the function
 });

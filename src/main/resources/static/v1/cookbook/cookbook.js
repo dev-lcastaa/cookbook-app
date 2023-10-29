@@ -224,6 +224,8 @@ function displayRecipeDetails(recipe) {
     new bootstrap.Modal(viewRecipeModal).show();
 }
 
+
+
 // Adds event listeners for page
 function addEventListeners() {
     const addRecipeButton = document.getElementById("addRecipe");
@@ -236,6 +238,7 @@ function addEventListeners() {
         deleteRecipeButton.addEventListener("click", displayListOfDeleteRecipes);
     }
 }
+
 
 // Add event listeners when the DOM content is loaded
 document.addEventListener("DOMContentLoaded", function () {
