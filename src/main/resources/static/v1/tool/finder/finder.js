@@ -43,6 +43,8 @@ async function fetchRecipe() {
             document.getElementById('recipeName').textContent = recipeObject.name;
             document.getElementById('recipeIngredients').textContent = recipeObject.ingredients;
             document.getElementById('recipeSteps').textContent = recipeObject.steps;
+
+            populateCookbookSelect();
         }
 
         // if the response is not a 200 ok
@@ -60,7 +62,6 @@ async function fetchRecipe() {
     //last it will hide the loading spinner
     finally { hideLoadingSpinner(); }
 }
-
 
 // Function to validate response from OpenAi is of specified format
 function validateResponse(response) {
@@ -98,13 +99,11 @@ function validateResponse(response) {
     }
 }
 
-
 // Function to show the loading spinner and hide the modal content
 function showLoadingSpinner() {
     document.getElementById('loadingSpinner').style.display = 'block';
     document.getElementById('recipeContent').style.display = 'none';
 }
-
 
 // Function to hide the loading spinner and display the modal content
 function hideLoadingSpinner() {
@@ -112,17 +111,71 @@ function hideLoadingSpinner() {
     document.getElementById('recipeContent').style.display = 'block';
 }
 
+// Function to dynamically populate the cookbook select element
+function populateCookbookSelect() {
+    // Retrieve the list of cookbooks from session storage
+    const cookbooks = JSON.parse(sessionStorage.getItem('cookbooks')) || [];
+
+    // Get the select element
+    const cookbookSelect = document.getElementById('cookbookList');
+
+    // Clear existing options in the select element
+    cookbookSelect.innerHTML = '';
+
+    // Add a default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = ''; // Empty value
+    defaultOption.text = 'Select Cookbook';
+    cookbookSelect.appendChild(defaultOption);
+
+    // Populate the select element with options from the cookbooks array
+    cookbooks.forEach((cookbook) => {
+        const option = document.createElement('option');
+        option.value = cookbook.id; // Use the 'id' property as the value
+        option.text = cookbook.name; // Assuming each cookbook object has a 'name' property
+        cookbookSelect.appendChild(option);
+    });
+}
+
+
+function addRecipeToCookBook(){
+    // Get the selected cookbook index from the select element
+    const selectedCookbookIndex = document.getElementById('cookbookList').value;
+    console.log(selectedCookbookIndex)
+
+    // Retrieve the list of cookbooks from session storage
+    const cookbooks = JSON.parse(sessionStorage.getItem('cookbooks')) || [];
+
+    // Get the recipe details from the response or wherever it's stored
+    const newRecipeData = {
+        name: document.getElementById('recipeName').textContent,
+        cookBookId: selectedCookbookIndex,
+        ingredients: document.getElementById('recipeIngredients').textContent,
+        steps: document.getElementById('recipeSteps').textContent,
+    };
+
+    const token = sessionStorage.getItem("token");
+    fetch("/api/v1/recipe", {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newRecipeData)
+        }).then(function (response) {
+                  if (response.ok) {
+                      // Parse the response body to get the token
+                      alert("Added Recipe to Cookbook")
+                  } else {
+                      alert("Failed to add Recipe")
+                      throw new Error("Failed to add Recipe");
+                  }
+              })
+
+}
 
 // Attach a click event listener to the "Get Recipe" button
 document.getElementById('fetchRecipeModalButton').addEventListener('click', fetchRecipe);
 
-
-// Attach click event listeners to other buttons if needed
-document.getElementById('getAnotherRecipeButton').addEventListener('click', () => {
-    // Handle getting another recipe
-});
-
-
-document.getElementById('addRecipeToCookBookButton').addEventListener('click', () => {
-    // Handle adding the recipe to the cookbook
-});
+// Attached a click event listener to the add recipe to cookbook button
+document.getElementById('addRecipeToCookBookButton').addEventListener('click', addRecipeToCookBook);

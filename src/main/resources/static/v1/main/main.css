@@ -76,11 +76,14 @@ button {
 
 /* Style the content */
 .container {
-  background-color: #222;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 60px;
-  text-align: center;
+   background-color: #222;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   padding: 20px; /* Adjust padding for better spacing */
+   text-align: center;
+   display: flex; /* Use Flexbox to organize content */
+   flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
 .box {
@@ -121,28 +124,67 @@ button {
 }
 
 @media (max-width: 767px) {
+  /* Adjust font size for better readability on mobile */
   body {
-    justify-content: flex-start; /* Align content to the top for mobile */
+    font-size: 14px;
   }
 
+  /* Reduce padding and margin on buttons for a more compact design */
+  button {
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  /* Adjust margin and padding for the container to improve spacing */
+  .container {
+    padding: 10px; /* Adjust padding for better spacing */
+  }
+
+  /* Center align text in the logo and reduce padding */
+  .logo {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px; /* Slightly reduce font size */
+    margin-bottom: 10px;
+  }
+
+  /* Modify the side navigation to be more responsive on mobile */
   .sidenav {
     width: 100%; /* Make the side navigation full-width on mobile */
+    max-width: 250px; /* Limit maximum width */
   }
 
-  /* Adjust other styles as needed for mobile devices */
+  /* Reduce padding and text size for side navigation links */
+  .sidenav a {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  /* Adjust spacing for the content container */
   .container {
-    padding: 20px; /* Reduce padding on smaller screens */
+    padding: 10px; /* Adjust padding for better spacing */
   }
 
+  /* Reduce margin for the boxes and align them in a column */
   .box {
-    max-width: 100%; /* Allow boxes to take the full width on mobile */
+    max-width: 100%;
+    margin: 10px 0; /* Reduce margin */
   }
 
+  /* Modify hover styles for top buttons */
   .topButtonAdd:hover {
-    background-color: GREEN; /* Mobile-friendly button hover color */
+    background-color: GREEN;
+    padding: 10px; /* Adjust padding */
   }
 
   .topButtonDelete:hover {
-    background-color: RED; /* Mobile-friendly button hover color */
+    background-color: RED;
+    padding: 10px; /* Adjust padding */
+  }
+
+  /* Adjust padding for list items for better spacing */
+  .list-group-item,
+  .list-group-item-delete {
+    padding: 10px; /* Adjust padding */
   }
 }

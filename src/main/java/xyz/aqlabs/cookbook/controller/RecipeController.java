@@ -30,7 +30,7 @@ public class RecipeController {
     // POST request endpoint to create recipes forwards request to the recipe service
     @PostMapping
     public ResponseEntity<?> createRecipe(@RequestBody RecipeDto dto){
-        LOGGER.info("[o][o][o]---| Method INVOKED in CookBook Controller|---[o][o][o]");
+        LOGGER.info("[o][o][o]---| Method INVOKED in Recipe Controller|---[o][o][o]");
         LOGGER.info("[o][o][o]---| createRecipe("+dto.hashCode()+") |---[o][o][o]");
         return service.createRecipe(dto);
     }

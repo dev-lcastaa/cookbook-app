@@ -13,9 +13,7 @@
     <a href="/v1/main">My Cook Books</a>
     <a href="/v1/tool/conversion">Conversion Tool</a>
     <a href="/v1/tool/recipeFinder">Recipe Finder</a>
-
 </div>
-
 
 <!-- Main Content -->
 <div class="container">
@@ -32,17 +30,15 @@
     </div>
 </div>
 
-<!-- -->
+<!-- Modal -->
 <div class="modal" id="fetchedRecipeModal">
     <div class="modal-dialog">
         <div class="modal-content">
-
             <!-- Modal Header -->
             <div class="modal-header">
                 <h4 class="modal-title">Recommended Recipe</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="text-center" id="loadingSpinner" style="display: none;">
@@ -57,23 +53,18 @@
                     <p id="recipeSteps"></p>
                 </div>
             </div>
-
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="submit" id="getAnotherRecipeButton" class="btn btn-primary" data-bs-dismiss="modal">Get Another Recipe</button>
-                <button type="submit" id="addRecipeToCookBookButton" class="btn btn-primary" data-bs-dismiss="modal">Add Recipe to Cookbook</button>
+                <p> Select Cookbook to save recipe to <p>
+                <select id="cookbookList" class="form-select">
+                    <!-- The list of cookbooks will be dynamically populated here -->
+                </select>
+                <button type="button" id="addRecipeToCookBookButton" class="btn btn-primary">Add Recipe to Cookbook</button>
             </div>
-
         </div>
     </div>
 </div>
 
-
 <script th:src="@{./finder/finder.js}"></script>
 </body>
 </html>
-
-
-
-
-

@@ -7,7 +7,6 @@ import java.util.Arrays;
 
 @SpringBootApplication
 public class CookbookApplication {
-
 	public static void main(String[] args) {
 
 		// you must Include the api key as an argument when launching the jar

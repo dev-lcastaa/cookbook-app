@@ -134,7 +134,6 @@ function displayListOfRecipes() {
     }
 }
 
-
 // Add event listeners when the DOM content is loaded
 document.addEventListener("DOMContentLoaded", function () {
     // Your event listeners and function calls here
