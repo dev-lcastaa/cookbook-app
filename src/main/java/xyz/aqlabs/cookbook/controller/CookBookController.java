@@ -16,7 +16,7 @@ import xyz.aqlabs.cookbook.service.CookbookService;
 
 
 @RestController
-@RequestMapping("/api/v1/cookbook")
+@RequestMapping("/v1/api/cookbook")
 @RequiredArgsConstructor
 public class CookBookController {
 

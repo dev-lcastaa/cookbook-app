@@ -43,7 +43,7 @@ public class FinderService {
 
         // Model configuration to POST openAi
         LOGGER.info("[X][X][X]---| CONFIGURING Model |---[X][X][X]");
-        var modelConfig = "{\"model\": \"gpt-3.5-turbo\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a recipe book. You will receive ingredients and an ethnicity in the following format:\\n{\\n  \\\"ingredients\\\": \\\"ingredient1, ingredient2\\\",\\n  \\\"ethnicity\\\": \\\"ethnicity\\\"\\n}\\nYou should return a detailed recipe from the specified ethnicity using the provided ingredients.\\nIf there are no ingredients, the ingredients are not valid, or the ethnicity is not specified, return an error message response.\\nIf the input does not match the specified format, return an error message response. Make sure that you do not give incomplete responses, Make sure its in JSON format, Ensure that all special characters within the JSON string are properly escaped\"}, {\"role\": \"user\", \"content\": \"{\\\"ingredients\\\":\\\""+dto.getIngredient()+"\\\",\\\"ethnicity\\\":\\\""+dto.getEthnicity()+"\\\"}\" }, {\"role\": \"assistant\", \"content\": \"{\\\"name\\\": \\\"Your Recipe Name\\\", \\\"ingredients\\\": \\\"Your Recipe Ingredients\\\", \\\"steps\\\": \\\"Your Recipe Steps\\\"}\"}], \"temperature\": 0.5, \"max_tokens\": 400}\n";
+        var modelConfig = "{\"model\": \"gpt-4\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a recipe book. You will receive ingredients and an ethnicity in the following format:\\n{\\n  \\\"ingredients\\\": \\\"ingredient1, ingredient2\\\",\\n  \\\"ethnicity\\\": \\\"ethnicity\\\"\\n}\\nYou should return a detailed recipe from the specified ethnicity using the provided ingredients make sure they are not in array formats.\\nIf there are no ingredients, the ingredients are not valid, or the ethnicity is not specified, return an error message response.\\nIf the input does not match the specified format, return an error message response. Make sure that you do not give incomplete responses, Make sure its in JSON format, Ensure that all special characters within the JSON string are properly escaped\"}, {\"role\": \"user\", \"content\": \"{\\\"ingredients\\\":\\\""+dto.getIngredient()+"\\\",\\\"ethnicity\\\":\\\""+dto.getEthnicity()+"\\\"}\" }, {\"role\": \"assistant\", \"content\": \"{\\\"name\\\": \\\"Your Recipe Name\\\", \\\"ingredients\\\": \\\"Your Recipe Ingredients\\\", \\\"steps\\\": \\\"Your Recipe Steps\\\"}\"}], \"temperature\": 0.5, \"max_tokens\": 400}\n";
 
         // Create an HTTP entity with the required headers (including the API key) and the model configuration.
         LOGGER.info("[X][X][X]---| CONFIGURING Request Headers |---[X][X][X]");
@@ -60,6 +60,7 @@ public class FinderService {
         // Extract the "content" field from the first choice and return it's in a more abstracted response
         LOGGER.info("[X][X][X]---| EXTRACTING recipe |---[X][X][X]");
         LOGGER.info("[o][o][o]---| EXITING method: recipeFinder("+dto.hashCode()+") in Finder Service with SUCCESS |---[o][o][o]");
+        System.out.println(jsonResponse.getChoices().get(0).getMessage().getContent());
         return ResponseEntity.ok().body(jsonResponse.getChoices().get(0).getMessage().getContent());
     }
 

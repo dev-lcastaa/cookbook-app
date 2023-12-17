@@ -1,6 +1,7 @@
 package xyz.aqlabs.cookbook.model.deserialization;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,6 +30,10 @@ public class JsonResponse {
 
     @JsonProperty("usage")
     private Usage usage;
+
+    @JsonProperty("system_fingerprint")
+    private String systemFingerPrint;
+
 
 
 

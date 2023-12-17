@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
@@ -21,11 +22,10 @@ public class SecurityConfig{
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf()
-                .disable()
+                .csrf().disable()
                 .authorizeRequests()
-                .requestMatchers("/api/v1/auth/**").permitAll()
-                .requestMatchers( "/v1/**").permitAll()
+                .requestMatchers( "/v1/api/**","/ui/**").permitAll()
+                .requestMatchers( "/css/**", "/js/**", "/img/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -35,6 +35,12 @@ public class SecurityConfig{
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
+    }
+
+
+    // If necessary, you can override this method to explicitly ignore the security filters for static resources
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().requestMatchers("/css/**", "/js/**", "/img/**");
     }
 
 }

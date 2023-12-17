@@ -15,7 +15,7 @@ import xyz.aqlabs.cookbook.model.dto.FetchRecipeDto;
 import xyz.aqlabs.cookbook.service.FinderService;
 
 @RestController
-@RequestMapping("/api/v1/finder")
+@RequestMapping("/v1/api/finder")
 @RequiredArgsConstructor
 public class FinderController {
 

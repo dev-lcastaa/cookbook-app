@@ -1,5 +1,6 @@
 package xyz.aqlabs.cookbook.model.deserialization;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
@@ -16,6 +17,10 @@ public class Choice {
 
     @JsonProperty("finish_reason")
     private String finishReason;
+
+    @JsonProperty("logprobs")
+    private LogProbs logProbs;
+
 
 
 }

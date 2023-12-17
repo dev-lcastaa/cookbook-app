@@ -20,7 +20,7 @@ import xyz.aqlabs.cookbook.service.UserService;
 
 
 @RestController
-@RequestMapping("/api/v1/auth")
+@RequestMapping("/v1/api/auth")
 @RequiredArgsConstructor
 public class AuthenticationController {
 

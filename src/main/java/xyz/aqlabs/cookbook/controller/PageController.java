@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/v1")
+@RequestMapping("/ui")
 public class PageController {
 
     // Implemented logging to track method activity
@@ -67,7 +67,7 @@ public class PageController {
 
 
     // GET request endpoint to get Conversion HTML Page.
-    @GetMapping("/tool/conversion")
+    @GetMapping("/conversion")
     public String getConversionPage(){
         LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
         LOGGER.info("[o][o][o]---| getConversionPage() |---[o][o][o]");
@@ -76,7 +76,7 @@ public class PageController {
 
 
     // GET request endpoint to get Finder HTML Page.
-    @GetMapping("/tool/recipeFinder")
+    @GetMapping("/recipeFinder")
     public String getFinderPage(){
         LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
         LOGGER.info("[o][o][o]---| getFinderPage() |---[o][o][o]");
