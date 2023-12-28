@@ -1,6 +1,6 @@
 {
   "output_filename":"cookbook-0.0.1-SNAPSHOT",
   "image_name":"aqlabs-cookbook",
-  "container_name": "aqlabs-cookbook"
-
+  "container_name": "aqlabs-cookbook",
+	"args":"-d -p 8080:8080"
 }
