@@ -2,5 +2,5 @@
   "output_filename":"cookbook-0.0.1-SNAPSHOT",
   "image_name":"aqlabs-cookbookapp",
   "container_name": "aqlabs-cookbook",
-  "args":"-d -p 80:8080 --network aqlabs-network"
+  "args":" -e \"OPENAI_API_KEY=$OPENAI_API_KEY \" -d -p 80:8080 --network aqlabs-network"
 }
