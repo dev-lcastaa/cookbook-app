@@ -5,27 +5,18 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
-import java.util.Arrays;
-import java.util.Scanner;
 
 @SpringBootApplication
 public class CookbookApplication {
 
-	@Autowired
-	static Environment env;
-
-
 	public static void main(String[] args) {
+		String key = System.getenv("OPENAI_API_KEY");
 
-		String key = env.getProperty("OPENAI_API_KEY");
-
-		try{
-			if(!key.isEmpty())
-				SpringApplication.run(CookbookApplication.class);
-			else
-				System.out.print("API KEY WAS NOT FOUND IN ENVIRONMENT");
-		}catch (Exception e){
-			System.err.println("Api Key Check resulted in error: " + e.getMessage());
+		if (key != null && !key.isEmpty()) {
+			SpringApplication.run(CookbookApplication.class, args);
+		} else {
+			System.out.println("API KEY WAS NOT FOUND IN ENVIRONMENT. APPLICATION NOT STARTED.");
+			System.exit(1);
 		}
 	}
 }
