@@ -6,8 +6,11 @@ Responsible for communicating to external OpenAi API
 */
 
 import lombok.SneakyThrows;
+import lombok.Value;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -18,11 +21,15 @@ import xyz.aqlabs.cookbook.model.dto.FetchRecipeDto;
 import java.util.*;
 
 
+
 @Service
 public class FinderService {
 
     //Implemented logging to track method activity
     private static final Logger LOGGER = LoggerFactory.getLogger(FinderService.class);
+
+    @Autowired
+    Environment env;
 
     final RestTemplate RESTTEMPLATE = new RestTemplate();
 
@@ -74,9 +81,9 @@ public class FinderService {
     }
 
 
-    // returns the api key set in start of the application launch
+    // returns the api key
     private String getApiKey() {
-        return System.getProperty("openai.api.key");
+        return env.getProperty("OPENAI_API_KEY");
     }
 
 }
