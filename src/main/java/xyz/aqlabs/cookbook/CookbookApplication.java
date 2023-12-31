@@ -13,6 +13,7 @@ public class CookbookApplication {
 		String key = System.getenv("OPENAI_API_KEY");
 
 		if (key != null && !key.isEmpty()) {
+			System.out.println("API_KEY was found with value: " + key );
 			SpringApplication.run(CookbookApplication.class, args);
 		} else {
 			System.out.println("API KEY WAS NOT FOUND IN ENVIRONMENT. APPLICATION NOT STARTED.");
