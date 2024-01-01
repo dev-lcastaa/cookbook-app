@@ -155,7 +155,7 @@ function addRecipeToCookBook(){
     };
 
     const token = sessionStorage.getItem("token");
-    fetch("/api/v1/recipe", {
+    fetch("/v1/api/recipe", {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
