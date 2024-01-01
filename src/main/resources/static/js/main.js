@@ -113,7 +113,7 @@ function displayDeleteCookBooks() {
 
         // Create a delete button and add a click event listener to trigger deletion
         var deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete Selected Cookbook';
+        deleteButton.textContent = 'Delete Cookbook';
         deleteButton.addEventListener("click", function () {
             if (selectedCookbookId !== null) {
                 // Call a function to handle the deletion of the selected cookbook

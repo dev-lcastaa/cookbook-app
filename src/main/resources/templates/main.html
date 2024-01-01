@@ -13,50 +13,48 @@
 
 <!-- SideBar -->
 <div class="sidenav">
-  <div class="logo">The Cook Book App</div>
-  <a href="/ui/main">My Cook Books</a>
+  <div class="logo">The Cookbook App</div>
+  <a href="/ui/main">My Cookbooks</a>
   <a href="/ui/conversion">Conversion Tool</a>
-  <a href="/ui/recipeFinder">Recipe Finder</a>
+  <a href="/ui/recipeFinder">Recipe Recommender</a>
 </div>
 
 
 <!-- Main Content -->
 <div class="container">
   <div class="box">
-    <h2>My Cook Books</h2>
+    <h2>My Cookbooks</h2>
     <tb>
       <button type="button" class="topButtonAdd" data-bs-toggle="modal" data-bs-target="#createCookBookModal">Add New Cook Book</button>
       <button id="deleteCookBookModalButton" type="button" class="topButtonDelete" data-bs-toggle="modal" data-bs-target="#deleteCookBookModal">Delete Cook Book</button>
     </tb>
     <ul class="list-group" id="listOfCookBooks" style="padding-top: 15px;">
     </ul>
-
-
   </div>
 </div>
 
 
-<!-- The Create New Cook Book Modal -->
+<!-- Create New Cook Book Modal -->
 <div class="modal" id="createCookBookModal">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Create Cook Book</h4>
+        <h4 class="modal-title">Create a new Cookbook</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
         <form>
-          <input id="cookbookName" type="text" class="form-control mt-3" placeholder="Name Of Cook Book" required>
+          <input id="cookbookName" type="text" class="form-control mt-3" placeholder="Cookbook name" required>
         </form>
       </div>
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="submit" id="addCookBook" class="btn btn-primary" data-bs-dismiss="modal">Add Cook Book</button>
+        <button type="submit" id="addCookBook" class="btn btn-primary" data-bs-dismiss="modal">Add Cookbook</button>
       </div>
 
     </div>
@@ -70,7 +68,7 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Delete Cook Book</h4>
+        <h4 class="modal-title">Delete a Cookbook</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
