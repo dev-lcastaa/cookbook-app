@@ -195,7 +195,7 @@ function displayListOfCookBooks() {
             cookbookLink.classList.add('a-cookBookList');
 
             cookbookLink.textContent = cookbook.name;
-            cookbookLink.href = `/v1/api/cookbook?cookBookId=${cookbook.id}`;
+            cookbookLink.href = `/ui/cookbook?cookBookId=${cookbook.id}`;
 
             // Append the anchor element to the list item
             listItem.appendChild(cookbookLink);
