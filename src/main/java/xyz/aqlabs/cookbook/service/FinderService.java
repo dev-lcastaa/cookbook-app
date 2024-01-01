@@ -39,6 +39,8 @@ public class FinderService {
     @SneakyThrows
     public ResponseEntity<?> recipeFinder(FetchRecipeDto dto) {
 
+        String key = System.getenv("KEY");
+
         LOGGER.info("[o][o][o]---| Method INVOKED in Finder Service |---[o][o][o]");
         LOGGER.info("[o][o][o]---| recipeFinder("+dto.hashCode()+") |---[o][o][o]");
 
@@ -51,7 +53,7 @@ public class FinderService {
 
         // Create an HTTP entity with the required headers (including the API key) and the model configuration.
         LOGGER.info("[X][X][X]---| CONFIGURING Request Headers |---[X][X][X]");
-        HttpEntity<String> requestEntity = createAuthEntity(getApiKey(), modelConfig);
+        HttpEntity<String> requestEntity = createAuthEntity(key, modelConfig);
 
         // Send the POST request to the OpenAI API.
         LOGGER.info("[X][X][X]---| MAKING request to API |---[X][X][X]");
@@ -76,11 +78,4 @@ public class FinderService {
         headers.setBearerAuth(apiKey);
         return new HttpEntity<>(modelConfig, headers);
     }
-
-
-    // returns the api key
-    private String getApiKey() {
-        return System.getProperty("KEY");
-    }
-
 }
