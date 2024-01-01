@@ -10,10 +10,10 @@ import org.springframework.core.env.Environment;
 public class CookbookApplication {
 
 	public static void main(String[] args) {
-		String key = System.getenv("OPENAI_API_KEY");
+		String key = System.getenv("KEY");
 
 		if (key != null && !key.isEmpty()) {
-			System.out.println("API_KEY was found with value: " + key );
+			System.out.println("KEY was found with value: " + key );
 			SpringApplication.run(CookbookApplication.class, args);
 		} else {
 			System.out.println("API KEY WAS NOT FOUND IN ENVIRONMENT. APPLICATION NOT STARTED.");

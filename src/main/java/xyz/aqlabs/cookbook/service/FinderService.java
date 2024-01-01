@@ -28,9 +28,6 @@ public class FinderService {
     //Implemented logging to track method activity
     private static final Logger LOGGER = LoggerFactory.getLogger(FinderService.class);
 
-    @Autowired
-    Environment env;
-
     final RestTemplate RESTTEMPLATE = new RestTemplate();
 
 
@@ -83,7 +80,7 @@ public class FinderService {
 
     // returns the api key
     private String getApiKey() {
-        return env.getProperty("OPENAI_API_KEY");
+        return System.getProperty("KEY");
     }
 
 }
