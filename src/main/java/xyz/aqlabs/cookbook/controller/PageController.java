@@ -23,8 +23,6 @@ public class PageController {
     // GET request endpoint to get login HTML Page.
     @GetMapping("/login")
     public String getLoginForm(){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getLoginForm() |---[o][o][o]");
         return "login.html";
     }
 
@@ -32,8 +30,6 @@ public class PageController {
     // GET request endpoint to get register HTML Page.
     @GetMapping("/register")
     public String getRegisterForm(){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getRegisterForm() |---[o][o][o]");
         return "register.html";
     }
 
@@ -41,8 +37,6 @@ public class PageController {
     // GET request endpoint to get Landing HTML Page.
     @GetMapping("/landing")
     public String getLandingPage(){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getLandingPage() |---[o][o][o]");
         return "landing.html";
     }
 
@@ -50,8 +44,6 @@ public class PageController {
     // GET request endpoint to get Main HTML Page.
     @GetMapping("/main")
     public String getMainPage(){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getMainPage() |---[o][o][o]");
         return "main.html";
     }
 
@@ -59,8 +51,6 @@ public class PageController {
     // GET request endpoint to get CookBook HTML Page.
     @GetMapping("/cookbook")
     public String getCookBookPage(@RequestParam("cookBookId")Integer cookBookId, Model model){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getCookBookPage() |---[o][o][o]");
         model.addAttribute("cookBookId", cookBookId);
         return "cookbook";
     }
@@ -69,8 +59,6 @@ public class PageController {
     // GET request endpoint to get Conversion HTML Page.
     @GetMapping("/conversion")
     public String getConversionPage(){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getConversionPage() |---[o][o][o]");
         return "conversion.html";
     }
 
@@ -78,8 +66,6 @@ public class PageController {
     // GET request endpoint to get Finder HTML Page.
     @GetMapping("/recipeFinder")
     public String getFinderPage(){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Page Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getFinderPage() |---[o][o][o]");
         return "finder.html";
     }
 

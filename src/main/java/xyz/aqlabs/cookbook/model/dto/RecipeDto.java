@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -14,7 +16,7 @@ public class RecipeDto {
 
     private Integer cookBookId;
     private String name;
-    private String ingredients;
-    private String steps;
+    private List<String> ingredients;
+    private List<String> steps;
 
 }

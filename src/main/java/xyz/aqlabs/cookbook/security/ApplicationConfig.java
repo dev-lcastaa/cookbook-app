@@ -13,6 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import xyz.aqlabs.cookbook.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.security.SecureRandom;
+
 
 @Configuration
 @RequiredArgsConstructor
@@ -43,7 +45,9 @@ public class ApplicationConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        SecureRandom random = new SecureRandom();
+        return new BCryptPasswordEncoder(
+                BCryptPasswordEncoder.BCryptVersion.$2A, 5,random);
     }
 
 }

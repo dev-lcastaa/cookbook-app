@@ -28,8 +28,6 @@ public class FinderController {
 
     @PostMapping("recipe")
     public ResponseEntity<?> getRecommendedRecipe(@RequestBody FetchRecipeDto dto){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Finder Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getRecommendedRecipe("+dto.hashCode()+") |---[o][o][o]");
         return service.recipeFinder(dto);
     }
 }

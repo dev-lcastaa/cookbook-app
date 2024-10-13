@@ -35,16 +35,12 @@ public class AuthenticationController {
     // handles the POST request made to the endpoint forwards request to the User service layer
     @PostMapping("/register")
     ResponseEntity<?> register(@RequestBody UserDto dto){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Authentication Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| register("+dto.hashCode()+") |---[o][o][o]");
         return service.createUser(dto);
     }
 
     // handles the POST request made to the endpoint forwards request to the Authentication service layer
     @PostMapping("/login")
     ResponseEntity<?> login(@RequestBody LoginDto dto){
-        LOGGER.info("[o][o][o]---| Method INVOKED in Authentication Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| login("+dto.hashCode()+") |---[o][o][o]");
         return authService.login(dto);
     }
 }

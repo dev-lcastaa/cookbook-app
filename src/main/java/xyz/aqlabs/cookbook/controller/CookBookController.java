@@ -30,8 +30,6 @@ public class CookBookController {
     // POST request endpoint to create cookbooks, forwards request to the cookbook service
     @PostMapping
     public ResponseEntity<?> addCookBook(@RequestBody CookbookDto dto){
-        LOGGER.info("[o][o][o]---| Method INVOKED in CookBook Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| addCookBook("+dto.hashCode()+") |---[o][o][o]");
         return service.createCookBook(dto);
     }
 
@@ -39,8 +37,6 @@ public class CookBookController {
     // DELETE request endpoint to delete cookbooks, forwards request to the cookbook service
     @DeleteMapping
     public ResponseEntity<?> deleteCookbook(@RequestParam("id")Integer id){
-        LOGGER.info("[o][o][o]---| Method INVOKED in CookBook Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| deleteCookBook("+id+") |---[o][o][o]");
         return service.deleteCookbook(id);
     }
 
@@ -48,8 +44,6 @@ public class CookBookController {
     // GET request endpoint to get an array of cookbooks using userID, forwards request to the cookbook service
     @GetMapping
     public ResponseEntity<?> getCookbooksByUserId(@RequestParam("userId") Integer userId){
-        LOGGER.info("[o][o][o]---| Method INVOKED in CookBook Controller|---[o][o][o]");
-        LOGGER.info("[o][o][o]---| getCookBooksByUserId("+userId+") |---[o][o][o]");
         return service.getByUserId(userId);
     }
 

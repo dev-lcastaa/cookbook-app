@@ -43,11 +43,7 @@ public class UserService  {
 
     // creates a new user this is called from the authentication controller
     public ResponseEntity<?> createUser(UserDto dto) {
-        // Logs when method is invoked provides hash code for following object through log file.
-        LOGGER.info("[o][o][o]---| Method INVOKED in User Service |---[o][o][o]");
-        LOGGER.info("[o][o][o]---| createUser("+dto.hashCode()+") |---[o][o][o]");
 
-        LOGGER.info("[X][X][X]---| Building User with username: "+dto.getUsername()+" |---[X][X][X]");
         var user = User.builder()
                 .username(dto.getUsername())
                 .email(dto.getEmail())
@@ -57,8 +53,6 @@ public class UserService  {
 
         // Repository saves the entity to the database.
         repo.save(user);
-        LOGGER.info("[X][X][X]---| COOKBOOK with hashcode: "+user.hashCode()+" has been CREATED |---[X][X][X]");
-        LOGGER.info("[o][o][o]---| EXITING method: createUser("+dto.hashCode()+") in User Service with SUCCESS |---[o][o][o]");
         return ResponseEntity.ok().body("{\"Msg\" : \"Created User Successfully\"}");
     }
 

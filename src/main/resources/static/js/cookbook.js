@@ -2,8 +2,10 @@
 async function addRecipe() {
     const name = document.getElementById("recipeName").value;
     const cookBookId = dataFromServer.cookBookId;
-    const ingredients = document.getElementById("ingredients").value;
-    const steps = document.getElementById("steps").value;
+    const ingredients = document.getElementById("ingredients")
+        .value.split("\n").map(item => item.trim());
+    const steps = document.getElementById("steps")
+        .value.split("\n").map(item => item.trim());
     const token = sessionStorage.getItem("token");
 
     const data = {
@@ -209,8 +211,8 @@ function displayRecipeDetails(recipe) {
     const modalBody = viewRecipeModal.querySelector(".modal-body");
 
     // Split the ingredients and steps by line breaks
-    const ingredientsList = recipe.ingredients.split('\n').map(item => `<div>${item}</div>`).join('');
-    const stepsList = recipe.steps.split('\n').map(item => `<div>${item}</div>`).join('');
+    const ingredientsList = recipe.ingredients.map(item => `<div>${item}</div>`).join('');
+    const stepsList = recipe.steps.map(item => `<div>${item}</div>`).join('');
 
     // Populate the modal with the recipe details
     modalBody.innerHTML = `

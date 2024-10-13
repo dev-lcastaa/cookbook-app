@@ -41,8 +41,14 @@ async function fetchRecipe() {
 
             // You can access individual properties like recipeObject.name, recipeObject.ingredients, etc.
             document.getElementById('recipeName').textContent = recipeObject.name;
-            document.getElementById('recipeIngredients').textContent = recipeObject.ingredients;
-            document.getElementById('recipeSteps').textContent = recipeObject.steps;
+            document.getElementById('recipeIngredients').innerHTML = recipeObject.ingredients
+                .map(ingredient => `<li>${ingredient.trim()}</li>`)
+                .join('');
+
+            document.getElementById('recipeSteps').innerHTML = recipeObject.steps
+                .map(step => `<li>${step.trim()}</li>`)
+                .join('');
+
 
             populateCookbookSelect();
         }
@@ -143,6 +149,9 @@ function addRecipeToCookBook(){
     const selectedCookbookIndex = document.getElementById('cookbookList').value;
     console.log(selectedCookbookIndex)
 
+    const stepsArray = Array.from(document.querySelectorAll('#recipeSteps li')).map(li => li.textContent.trim());
+    const IngredientsArray = Array.from(document.querySelectorAll('#recipeIngredients li')).map(li => li.textContent.trim());
+
     // Retrieve the list of cookbooks from session storage
     const cookbooks = JSON.parse(sessionStorage.getItem('cookbooks')) || [];
 
@@ -150,8 +159,8 @@ function addRecipeToCookBook(){
     const newRecipeData = {
         name: document.getElementById('recipeName').textContent,
         cookBookId: selectedCookbookIndex,
-        ingredients: document.getElementById('recipeIngredients').textContent,
-        steps: document.getElementById('recipeSteps').textContent,
+        ingredients: IngredientsArray,
+        steps: stepsArray,
     };
 
     const token = sessionStorage.getItem("token");

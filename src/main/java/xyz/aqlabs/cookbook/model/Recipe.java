@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @RequiredArgsConstructor
@@ -20,7 +22,7 @@ public class Recipe {
     private Integer cookBookId;
     private String name;
     @Column(length = 750)
-    private String ingredients;
+    private List<String> ingredients;
     @Column(length = 750)
-    private String steps;
+    private List<String> steps;
 }

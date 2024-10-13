@@ -18,4 +18,7 @@ public class Message {
     @JsonProperty("content")
     private String content;
 
+    @JsonProperty("refusal")
+    private String refusal;
+
 }
